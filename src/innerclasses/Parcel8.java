@@ -9,7 +9,7 @@ public class Parcel8 {
 				return super.value() * 47;
 			}
 			
-		};
+		}; // semicolon required.
 	}
 	public static void main(String[] args) {
 		Parcel8 parcel8 = new Parcel8();
