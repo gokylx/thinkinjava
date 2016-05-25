@@ -7,4 +7,3 @@ public class TestRandVal {
 		System.out.println(RandVals.RAND_FLAOT);
 	}
 }
-

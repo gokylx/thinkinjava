@@ -1,9 +1,11 @@
 package polymorphism;
 // Dynamically changing the behavior of an object
+
 // via composition (the "State" design pattern)
 
 class Actor {
-	public void act() {}
+	public void act() {
+	}
 }
 
 class HappyActor extends Actor {
@@ -22,8 +24,14 @@ class SadActor extends Actor {
 
 class Stage {
 	private Actor actor = new HappyActor();
-	public void change() { actor = new SadActor(); }
-	public void performPlay() { actor.act(); }
+
+	public void change() {
+		actor = new SadActor();
+	}
+
+	public void performPlay() {
+		actor.act();
+	}
 }
 
 public class Transmogrify {

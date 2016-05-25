@@ -67,7 +67,7 @@ public class HorrorShow {
 	static void w(Lethal l) {
 		l.kill();
 	}
-	
+
 	public static void main(String[] args) {
 		DangerousMonster barney = new DragonZilla();
 		u(barney);

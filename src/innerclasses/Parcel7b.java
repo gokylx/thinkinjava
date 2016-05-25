@@ -11,9 +11,11 @@ public class Parcel7b {
 		}
 
 	}
+
 	public Contents contents() {
 		return new MyContents();
 	}
+
 	public static void main(String[] args) {
 		Parcel7b parcel7b = new Parcel7b();
 		Contents contents = parcel7b.contents();

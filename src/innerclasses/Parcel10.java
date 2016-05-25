@@ -1,4 +1,5 @@
 package innerclasses;
+
 // Using "instance initialization" to perform
 // constructor on an inner class.
 public class Parcel10 {
@@ -12,19 +13,21 @@ public class Parcel10 {
 					System.out.println("Over budget!");
 				}
 			}
-//			private String label = dest;
+
+			// private String label = dest;
 			@Override
 			public String readLabel() {
-//				return label;
+				// return label;
 				return dest;
 			}
 		};
 	}
+
 	public static void main(String[] args) {
 		Parcel10 parcel10 = new Parcel10();
 		Destination destination = parcel10.destination("Tasmania", 101.395F);
 		destination.readLabel();
-		
+
 	}
 
 }

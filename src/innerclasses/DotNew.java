@@ -9,6 +9,7 @@ public class DotNew {
 	public static void main(String[] args) {
 		DotNew dotNew = new DotNew();
 		DotNew.Inner inner = dotNew.new Inner();
+		System.out.println(inner.toString());
 
 	}
 }

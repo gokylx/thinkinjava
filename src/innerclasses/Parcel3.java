@@ -27,6 +27,8 @@ public class Parcel3 {
 		Parcel3 parcel3 = new Parcel3();
 		Contents contents = parcel3.new Contents();
 		Destination destination = parcel3.new Destination("Tasmania");
+		System.out.println(contents.i);
+		System.out.println(destination.label);
 	}
 
 }

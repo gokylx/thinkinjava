@@ -41,5 +41,7 @@ public class TestParcel {
 		Parcel4 parcel4 = new Parcel4();
 		Contents contents = parcel4.contents();
 		Destination destiantion = parcel4.destiantion("Tasmania");
+		System.out.println(contents.toString());
+		System.out.println(destiantion.toString());
 	}
 }
