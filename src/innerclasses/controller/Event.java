@@ -8,10 +8,10 @@ public abstract class Event {
 	public Event(long delayTime) {
 
 		this.delayTime = delayTime;
-		star();
+		start();
 	}
 
-	public void star() {
+	public void start() {
 		eventTime = System.nanoTime() + delayTime;
 	}
 
