@@ -21,7 +21,7 @@ public class QueueDemo {
 		printQ(linkedList);
 	}
 
-	private static void printQ(Queue<?> queueInteger) {
+	public static void printQ(Queue<?> queueInteger) {
 		while (!queueInteger.isEmpty()) {
 			System.out.print(queueInteger.remove() + " ");
 		}
