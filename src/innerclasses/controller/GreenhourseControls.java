@@ -80,4 +80,104 @@ public class GreenhourseControls extends Controller {
 		}
 	}
 
+	private String thermostat = "Night";
+
+	public class ThemostatDay extends Event {
+		public ThemostatDay(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			// put hardware control code to here
+			thermostat = "Day";
+		}
+
+		@Override
+		public String toString() {
+			return "Thermostat on day setting.";
+		}
+
+	}
+
+	public class ThermostatNight extends Event {
+		public ThermostatNight(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			// put hardware control code to here.
+			thermostat = "Night";
+		}
+
+		@Override
+		public String toString() {
+			return "Thermostat on night setting.";
+		}
+	}
+
+	// an example of action() that insert a new one of itself into the event
+	// list.
+	public class Bell extends Event {
+		public Bell(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			addEvent(new Bell(delayTime));
+		}
+
+		@Override
+		public String toString() {
+			return "Bing!";
+		}
+
+	}
+
+	public class Restart extends Event {
+
+		private Event[] eventList;
+
+		public Restart(long delayTime, Event[] eventList) {
+			super(delayTime);
+			this.eventList = eventList;
+			for (Event event : eventList) {
+				addEvent(event);
+			}
+		}
+
+		@Override
+		public void action() {
+			for (Event event : eventList) {
+				event.start();
+				addEvent(event);
+			}
+			start();
+			addEvent(this);
+		}
+
+		@Override
+		public String toString() {
+			return "Restarting the system...";
+		}
+
+	}
+
+	public static class Terminate extends Event {
+		public Terminate(long delayTime) {
+			super(delayTime);
+		}
+
+		@Override
+		public void action() {
+			System.exit(0);
+		}
+
+		@Override
+		public String toString() {
+			return "System terminating...";
+		}
+	}
 }
