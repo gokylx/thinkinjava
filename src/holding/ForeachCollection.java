@@ -11,7 +11,7 @@ public class ForeachCollection {
 		Collections.addAll(list, "long long a way to travel".split(" "));
 
 		for (String string : list) {
-			System.out.print("'" + string + "'");
+			System.out.print(" '" + string + "' ");
 		}
 	}
 }
