@@ -11,7 +11,9 @@ public class ExceptionMethods {
 			// e.printStackTrace(System.out);
 			System.out.println("getLocalizedMessage: " + e.getLocalizedMessage());
 			System.out.println("toString: " + e);
+
 			e.printStackTrace(System.out);
+			// System.out.println(e.getStackTrace().toString());
 		}
 	}
 }
