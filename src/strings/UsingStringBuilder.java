@@ -13,10 +13,11 @@ public class UsingStringBuilder {
 			stringBuilder.append(", ");
 		}
 
-		stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length());
+		// stringBuilder.delete(stringBuilder.length() - 2,
+		// stringBuilder.length());
 
-		// stringBuilder.deleteCharAt(stringBuilder.length() - 1);
-		// stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+		stringBuilder.deleteCharAt(stringBuilder.length() - 1);
+		stringBuilder.deleteCharAt(stringBuilder.length() - 1);
 
 		stringBuilder.append("]");
 		return stringBuilder.toString();
