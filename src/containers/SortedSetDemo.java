@@ -17,7 +17,6 @@ public class SortedSetDemo {
 
 		System.out.println(sort.headSet("four"));
 		System.out.println(sort.subSet("one", "two"));
-		// System.out.println(sort.subSet("two", "one"));
 		System.out.println(sort.tailSet("six"));
 
 	}
