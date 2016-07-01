@@ -6,15 +6,16 @@ import java.io.EOFException;
 import java.io.IOException;
 
 public class FormattedMemoryInput {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		try {
+			new BufferedInputFile();
 			DataInputStream in = new DataInputStream(new ByteArrayInputStream(
-					new BufferedInputFile().read("E:/Java/thinkinjava/src/io/FormattedMemoryInput.java").getBytes()));
+					BufferedInputFile.read("E:/Java/thinkinjava/src/io/FormattedMemoryInput.java").getBytes()));
 			while (true) {
 				System.out.println((char) in.readByte());
 			}
 		} catch (EOFException e) {
-			System.err.println(););
+			System.err.println("End of stream");
 		}
 	}
 }
