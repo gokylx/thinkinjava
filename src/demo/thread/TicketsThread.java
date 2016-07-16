@@ -15,7 +15,7 @@ class MyThread extends Thread{
 			System.out.println(name + " 卖了1张票,剩余票数为："+ ticktsCont);
 		}
 	}
-}
+}f
 public class TicketsThread {
 	public static void main(String[] args) {
 		MyThread mt1 = new MyThread("窗口1");
