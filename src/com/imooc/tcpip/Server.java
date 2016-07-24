@@ -13,11 +13,13 @@ public class Server {
 //			2.调用accept()监听，等待客户端连接
 			System.out.println("***服务器即将启动，等待客户端的连接***");
 			Socket socket = null;
+			int count = 0;
 			while(true) {
 			socket = serverSocket.accept();
 				Thread serverThread = new ServerThread(socket);
 				serverThread.start();
-				
+				count+= 1;
+				System.out.println("当前客户端的数量： " + count);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
